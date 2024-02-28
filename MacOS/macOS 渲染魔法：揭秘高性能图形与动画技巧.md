@@ -436,11 +436,11 @@ func isFlipped -> Bool {
 
 
 
-<img src="/Users/meitu/Library/Application Support/typora-user-images/image-20230529141353714.png" alt="image-20230529141353714" style="zoom:50%;" />
+<img src="../images/image-20230529141353714.png" alt="image-20230529141353714" style="zoom:50%;" />
 
 锚点（AnchorPoint）：
 
-<img src="/Users/meitu/Library/Application Support/typora-user-images/image-20230529155205854.png" alt="image-20230529155205854" style="zoom:50%;" />
+<img src="../images/image-20230529155205854.png" alt="image-20230529155205854" style="zoom:50%;" />
 
 #### 像素
 
@@ -725,9 +725,9 @@ NSAnimationContext.runAnimationGroup({ context in
 
 下面是视图 size 变化时动画过程，Core Animation 只有在开始的t1和最后的t4时刻工作在主线程，其他时刻均在后台线程运行。
 
-<img src="/Users/meitu/Library/Application Support/typora-user-images/image-20230529161937514.png" alt="image-20230529161937514" style="zoom:50%;" />
+<img src="../images/image-20230529161937514.png" alt="image-20230529161937514" style="zoom:50%;" />
 
-<img src="/Users/meitu/Library/Application Support/typora-user-images/image-20230529161957262.png" alt="image-20230529161957262" style="zoom:50%;" />
+<img src="../images/image-20230529161957262.png" alt="image-20230529161957262" style="zoom:50%;" />
 
 
 
