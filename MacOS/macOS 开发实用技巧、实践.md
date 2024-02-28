@@ -61,7 +61,7 @@ AppDelegate
 
 
 
-![image-20230510130532645](../images/image-20230510130532645.png)
+![image-20230510130532645](./images/image-20230510130532645.png)
 
 
 
@@ -82,16 +82,16 @@ AppDelegate
 7. **窗口样式**：使用 NSWindowStyleMask 枚举，您可以自定义窗口的外观，例如是否可调整大小、是否有边框等。
 8. **事件处理**：NSWindow 是响应链中的一个关键节点，它负责将各种用户界面事件路由到恰当的目标，例如鼠标点击、键盘按键等。
 
-<img src="../images/image-20230510140040526.png" alt="image-20230510140040526" style="zoom:50%;" />
+<img src="./images/image-20230510140040526.png" alt="image-20230510140040526" style="zoom:50%;" />
 
 ### 窗口分类
 
 keyWindow 和 mainWindow 可以是同一个窗口，也可以是不同的窗口。当 mainWindow 可以接收输入事件时，它同时也是 key Window。
 它的窗口对象是活动窗口，也是 mainWindow，可以接收输入。因此同时也是 keyWindow。
 
-<img src="../images/image-20230510134833476.png" alt="image-20230510134833476" style="zoom:50%;" />
+<img src="./images/image-20230510134833476.png" alt="image-20230510134833476" style="zoom:50%;" />
 
-![image-20230510134344608](../images/image-20230510134344608.png)
+![image-20230510134344608](./images/image-20230510134344608.png)
 
 ### 窗口与窗口控制器的关系
 
@@ -162,7 +162,7 @@ override init(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?)
 3. 通过 self.view.window 获取 view 的 window。
 4. 窗口加载之前，即 windowDidLoad 执行时会先加载 window 对应的内容视图执行从而触发视图控制器 `NSViewController` 的 `viewDidLoad` 方法，在 viewDidLoad 中视图的窗口属性没有被设置，只有视图展示到屏幕上时才会设置。因此需要在 viewDidAppear 方法中去获取。self.view 的所有子视图的 window 获取也同样如此。
 
-![image-20230523205300864](../images/image-20230523205300864.png)
+![image-20230523205300864](./images/image-20230523205300864.png)
 
 ### 约束更新
 
@@ -196,7 +196,7 @@ cond(yes)->e
 
 最终承载内容的是 DocumentView
 
-![image-20230523192554486](../images/image-20230523192554486.png)
+![image-20230523192554486](./images/image-20230523192554486.png)
 
 除 NSScrollView 本身，其它需要滚动的视图都需要设置为 NSScrollView 的 documentView，才能滚动，使用 Xib 创建的系统会自动添加。
 
@@ -211,9 +211,9 @@ cond(yes)->e
 
 ### 控件家族类图谱
 
-<img src="../images/image-20230523194359523.png" alt="image-20230523194359523" style="zoom:50%;" />
+<img src="./images/image-20230523194359523.png" alt="image-20230523194359523" style="zoom:50%;" />
 
-<img src="../images/image-20230523194505505.png" alt="image-20230523194505505"  />
+<img src="./images/image-20230523194505505.png" alt="image-20230523194505505"  />
 
 通过上面的类的继承图谱，我们可以看出：
 
@@ -278,13 +278,13 @@ NSColorpanel、NSSavePanel、NSOpenPanel、NSFontManager
 
 > 每个应用在 Dock 面板 上 icon 鼠标右击会出现一个菜单，里面是系统默认的菜单。每个应用可以增加自定义菜单项到自己的Dock菜单上。
 
-<img src="../images/image-20230523203105796.png" alt="image-20230523203105796" style="zoom:50%;" />
+<img src="./images/image-20230523203105796.png" alt="image-20230523203105796" style="zoom:50%;" />
 
 ### NSStatusBar
 
-<img src="../images/image-20230523203242873.png" alt="image-20230523203242873" style="zoom:50%;" />
+<img src="./images/image-20230523203242873.png" alt="image-20230523203242873" style="zoom:50%;" />
 
-![image-20230523203310931](../images/image-20230523203310931.png)
+![image-20230523203310931](./images/image-20230523203310931.png)
 
 `NSStatusBarButton` 由 `NSStatusltem` 自动创建，只需要像普通的 button 一样，设置它的 image, title, action, target 属性就可以。
 
@@ -298,7 +298,7 @@ NSColorpanel、NSSavePanel、NSOpenPanel、NSFontManager
 >
 > StackView 可以根据布局元素的方向分为水平和垂直布局2种。
 
-![image-20230523204310401](../images/image-20230523204310401.png)
+![image-20230523204310401](./images/image-20230523204310401.png)
 
 
 
@@ -310,13 +310,13 @@ NSColorpanel、NSSavePanel、NSOpenPanel、NSFontManager
 
 ### 事件分发过程
 
-![image-20230523205528957](../images/image-20230523205528957.png)
+![image-20230523205528957](./images/image-20230523205528957.png)
 
-<img src="../images/image-20230523194809063.png" alt="image-20230523194809063" style="zoom:50%;" />
+<img src="./images/image-20230523194809063.png" alt="image-20230523194809063" style="zoom:50%;" />
 
 ### 事件响应链接关系
 
-![image-20230523200038749](../images/image-20230523200038749.png)
+![image-20230523200038749](./images/image-20230523200038749.png)
 
 ### 鼠标事件
 
@@ -374,7 +374,7 @@ NSEvent.removeMonitor(eventMonitor)
 > func sendAction(_ action: Selector, to target: Any?, from sender: Any?) -> Bool
 > ```
 
-![image-20230523211612989](../images/image-20230523211612989.png)
+![image-20230523211612989](./images/image-20230523211612989.png)
 
 可以看出普通的事件消息是在控件内部处理，KeyDown, MouseDown 等事件响应方法是定义在控件内部。而 Action 消息的事件响应方法一般是在 target 对象的内部定义实现的。
 NSControl , NSMenu , NSToolbar 等控件都是以 Action 消息形式响应事件。
@@ -393,7 +393,7 @@ NSlnvocation 是一种包含执行方法的对象,方法签名和参数组合的
 NSInvocation = target + selector +parameters。
 借助 NSInvocation 对象，可以将其他任何对象实例方法和参数存储起来，以备需要的时候执行。NSUndoManager 将需要 Undo 的操作封装成 NSInvocation 对象存储到 Undo 堆栈。需要撒销操作时，从 Undo 堆栈 Top 顶部获取一个 NSlnvocation 对象，执行 Undo 操作。同时将其逆操作封装成 NSlnvocation 对象，压入到 Redo 堆栈。需要 Redo 操作执行类似的过程。
 
-<img src="../images/image-20230523212237046.png" alt="image-20230523212237046" style="zoom:50%;" />
+<img src="./images/image-20230523212237046.png" alt="image-20230523212237046" style="zoom:50%;" />
 
 #### 巧妙之处
 
@@ -436,7 +436,7 @@ undoManager.enableUndoRegistration()
 >
 > 拖放源和拖放目标之间是通过系统的剪贴板缓存数据来完成的数据交换,整个拖放过程中，涉及到拖放源和拖放目标之间一系列的交互处理流程。
 
-![image-20230523214636350](../images/image-20230523214636350.png)
+![image-20230523214636350](./images/image-20230523214636350.png)
 
 ### 拖放源数据层级结构
 
@@ -463,7 +463,7 @@ NSPasteboardReading
 >
 > 这有助于简化 Model-View-Controller（MVC）设计模式的实现，将业务逻辑与视图展示解耦，提高代码的可维护性和可扩展性。
 
-<img src="../images/image-20230523221400033.png" alt="image-20230523221400033" style="zoom:50%;" />
+<img src="./images/image-20230523221400033.png" alt="image-20230523221400033" style="zoom:50%;" />
 
 ### 原理
 
@@ -482,7 +482,7 @@ NSObjectController, NSUserDefaultsController, NSArrayController, NSTreeControlle
 
 ### KVB 绑定的处理流程
 
-![image-20230523222404744](../images/image-20230523222404744.png)
+![image-20230523222404744](./images/image-20230523222404744.png)
 
 
 
@@ -519,7 +519,7 @@ NSObjectController, NSUserDefaultsController, NSArrayController, NSTreeControlle
 
 > Service是 macOS 应用提供对外服务能力的一种机制。
 
-<img src="../images/image-20230523224637548.png" alt="image-20230523224637548" style="zoom:50%;" />
+<img src="./images/image-20230523224637548.png" alt="image-20230523224637548" style="zoom:50%;" />
 
 ### Service 处理流程
 
@@ -527,7 +527,7 @@ NSObjectController, NSUserDefaultsController, NSArrayController, NSTreeControlle
 
 通常有以下四个阶段
 
-![image-20230523224805249](../images/image-20230523224805249.png)
+![image-20230523224805249](./images/image-20230523224805249.png)
 
 1. copy 阶段：服务使用者将需要处理的数据写入系统剪贴板对象
 2. read 阶段：服务提供者从系统剪贴板获取数据
@@ -548,7 +548,7 @@ XPC 带来了2个明品的优势：
 
 2. 更好的隔离，XPC服务仅仅暴漏服务接口，内部的数据结构，私有数据都在自己独立的沙盒里面，得到了更好的隔离保护。
 
-<img src="../images/image-20230523225624449.png" alt="image-20230523225624449" style="zoom:50%;" />
+<img src="./images/image-20230523225624449.png" alt="image-20230523225624449" style="zoom:50%;" />
 
 ## 文件与权限
 
@@ -585,7 +585,7 @@ Document Types 中可以设置应用跟文件的关联。比如你开发了一�
 
 例如：Photoshop、Final Cut Pro、iMovie 都能产生自己的格式文件，并且使用自己软件能直接打开。
 
-<img src="../images/image-20230529172713085.png" alt="image-20230529172713085" style="zoom:50%;" />
+<img src="./images/image-20230529172713085.png" alt="image-20230529172713085" style="zoom:50%;" />
 
 
 
@@ -594,7 +594,7 @@ Document Types 中可以设置应用跟文件的关联。比如你开发了一�
 > OSX 自从10.6系统开始引入沙盒机制，规定发布到 Mac AppStore 的应用必须遵守沙盒约定。沙盒对应用访问的系统资源、硬件外设、文件,网络、XPC等都做了严格的限制，这样能防止恶意的 App 通过系统漏洞，攻击系统，获取控制权限，保证了 OSX 系统的安全。
 > 沙盒相当于给每个 App 一个独立的空间，只能在自己的空间随意访问。要获取自己空间之外的资源必须获得授杈。
 
-<img src="../images/image-20230529180658741.png" alt="image-20230529180658741" style="zoom:50%;" />
+<img src="./images/image-20230529180658741.png" alt="image-20230529180658741" style="zoom:50%;" />
 
 ####  沙盒隔离有以下优势：
 
